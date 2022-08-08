@@ -1,0 +1,11 @@
+version: '3.7'
+services:
+
+  rtpengine:
+    build: ./
+    ports:
+      - 10041-11000:10041-11000/udp
+    environment:
+      - PUBLIC_IP=${PUBLIC_IP}
+      - MIN_PORT=${MIN_PORT}
+      - MAX_PORT=${MAX_PORT}
